@@ -1,0 +1,27 @@
+{
+  "name": "bpg-nino-mtavruli-bold",
+  "description": "BPG Nino Mtavruli Bold Web-Font Package",
+  "version": "1.0.0",
+  "keywords": ["ttf", "woff", "woff2", "svg", "font", "web-font", "bpg-nino-mtavruli-bold"],
+  "main": [
+    "css/bpg-nino-mtavruli-bold.css"
+  ],
+  "homepage": "https://github.com/web-fonts/bpg-nino-mtavruli-bold",
+  "authors": [
+    "Lado Lomidze <lado.lomidze@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/web-fonts/bpg-nino-mtavruli-bold.git"
+  },
+  "license": ["MIT", "CC-BY-NC-ND-4.0"],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "*.md",
+    "font.json"
+  ]
+}
