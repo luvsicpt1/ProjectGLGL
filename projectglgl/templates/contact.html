@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>კონტაქტი</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">მთავარი</a>
+            <a href="/catalog">კატალოგი</a>
+            <a href="/admin">ადმინი</a>
+            <a href="/about">ჩვენ შესახებ</a>
+            <a href="/contact">კონტაქტი</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>დაგვიკავშირდით</h1>
+
+        <form method="POST">
+            <label for="name">სახელი:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">მეილი:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">შეტყობინება:</label>
+            <textarea id="message" name="message" required></textarea><br>
+
+            <button type="submit">გაგზავნა</button>
+        </form>
+
+        {% if submissions %}
+        <section class="results">
+            <h2>მიღებული შეტყობინებები:</h2>
+            <ul>
+                {% for s in submissions %}
+                    <li>
+                        <strong>{{ s.name }}</strong> ({{ s.email }}) წერს:<br>
+                        "{{ s.message }}"
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+    </main>
+</body>
+</html>
+
