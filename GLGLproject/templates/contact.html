@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}კონტაქტი - GLGL{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="text-center mb-5">
+        <h1 class="section-title">დაგვიკავშირდით</h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="p-4 p-md-5 border rounded-3 bg-light">
+                <form method="POST" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">თქვენი სახელი</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">ელ. ფოსტა</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">შეტყობინება</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">გაგზავნა</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
