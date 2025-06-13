@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row g-5">
+        <div class="col-lg-6">
+            <img src="{{ product.image_url }}" class="img-fluid rounded shadow-sm" alt="{{ product.name }}" onerror="this.onerror=null;this.src='https://placehold.co/800x600/EFEFEF/CCCCCC?text=Image+Not+Found';">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5">{{ product.name }}</h1>
+            <p class="lead text-primary fs-3 fw-bold">{{ product.price }} ₾</p>
+            <p><strong>ზომა:</strong> {{ product.size }}</p>
+            <hr>
+            <p><strong>აღწერა:</strong></p>
+            <p>ეს არის მაღალი ხარისხის პროდუქტი, რომელიც შექმნილია თქვენი კომფორტისთვის. იდეალურია ყოველდღიური გამოყენებისთვის და გამოირჩევა გამძლეობით.</p>
+            <button class="btn btn-primary btn-lg mt-3">
+                <i class="bi bi-cart-plus"></i> კალათაში დამატება
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
